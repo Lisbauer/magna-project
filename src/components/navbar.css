@@ -1,0 +1,52 @@
+.navbar-container{
+    height: 100px;
+    background-color: #132c6b83;
+}
+.logo_li_container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.logo_magna{
+    width: 250px;
+}
+.ul_box{
+    display: flex;
+    margin: 10;
+}
+.ul_box li{
+    color: white;
+    list-style: none;
+    display: inline-block;
+    margin: 10px 0;
+    z-index: 2;
+}
+.ul_box li a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    margin: 0 10px;
+    padding: 10px 25px;
+    position: relative;
+}
+.ul_box li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: #F2055C;
+    z-index: -1;
+    box-shadow: 0 0 10px #F2055C,
+                0 0 20px #F2055C,
+                0 0 40px #F2055C,
+                0 0 80px #F2055C,
+                0 0 100px #F2055C;
+    transition: 0.25s;
+}
+.ul_box li a:hover::before{
+    width: 100%;
+}
