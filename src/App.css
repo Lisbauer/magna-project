@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: 'Space Grotesk', sans-serif;
+
   background-image: url(../public/images/space.png); 
   background-attachment: fixed;
   background-size: cover;

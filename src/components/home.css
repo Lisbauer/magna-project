@@ -37,7 +37,7 @@
     -webkit-text-stroke: 0vw #F2055C;
     border-right: 2px solid #F2055C;
     overflow: hidden;
-    animation: dimenseon 6s linear infinite;
+    animation: dimenseon 5s linear infinite;
 }
 @keyframes dimenseon{
     0%,10%,100%{
@@ -45,7 +45,7 @@
     }
     70%,90%{
         width: 100%;
-        filter: blur(15px);
+        /* filter: blur(15px); */
     }
 }
 .home_btn_container{
