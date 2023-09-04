@@ -45,7 +45,6 @@
     }
     70%,90%{
         width: 100%;
-        /* filter: blur(15px); */
     }
 }
 .home_btn_container{
@@ -54,19 +53,20 @@
     justify-content: center;
 }
 .home_btn{
-    background: #fbfbfbb8;
+    background: #8f7be92f;
     position: relative;
     display: inline-block;
     padding: 25px 30px;
     margin: 40px 0;
+    border-radius: 10px;
     color: #F2055C ;
-    font-size: 18px;
+    font-size: 15px;
     text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
     transition: 0.5s;
     letter-spacing: 4px;
-    -webkit-box-reflect: below 1px linear-gradient(transparent,rgba(0, 0, 0, 0.437));
+    -webkit-box-reflect: below 1px linear-gradient(transparent,rgba(0, 0, 0, 0.133));
 }
 .home_btn:hover{
     background: #F2055C ;
