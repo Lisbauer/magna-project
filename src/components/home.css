@@ -25,6 +25,7 @@
     -webkit-text-stroke: 0.1vw #F2055C;
     text-transform: uppercase;
     margin: 0;
+    font-weight: 100;
 }
 .dimenseon_text::before{
     content: attr(data-text);

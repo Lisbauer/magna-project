@@ -1,7 +1,6 @@
 .cards_superior{ 
     height: 100vh;
     background-image: url(../../public/images/section4.png); 
-
 }
 .container2{
     position: relative;
@@ -11,16 +10,16 @@
     padding: 40px 0;
     flex-wrap:  wrap;    
 }
-.cards_tittle{
-    color: #F2055C;
+.cards_tittle{ 
+    color: #ffffff;
     font-size: 40px;
     font-weight: 900;
     letter-spacing: 3px;
-    text-shadow: 0 0 10px #F2055C,
+    /* text-shadow: 0 0 10px #F2055C,
                  0 0 20px #F2055C,
                  0 0 40px #F2055C,
                  0 0 80px #F2055C,
-                 0 0 120px #F2055C;
+                 0 0 120px #F2055C;*/ 
     padding-top: 80px;
 }
 /*.lightbar{

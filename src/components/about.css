@@ -2,9 +2,52 @@
     height: 100vh;
     background-image: url(../../public/images/section6.png); 
     background-size: cover;
-    background-color: #132C6B;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
+.about_bg{
+    background: #1010109b;
+    padding: 40px;
+    border: solid 1px #f2055c;
+}
+.about_box{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.about_tittle{
+    color: #f2055c;
+    font-size: 50px;
+}
+.about_container p{
+    color: white;
+    text-align: center;
+    width: 600px;
+    font-size: 1.2em;
+    line-height: 20px;
+}
+
+/* alan astro */ 
+
+.astro_alan{
+    width: 350px;
+    animation: astroalan 20s linear infinite;
+}
+@keyframes astroalan {
+    0% {
+      transform: rotate(0deg) translateX(10px);
+    }
+    25% {
+      transform: rotate(10deg) translateX(10px);
+    }
+    50% {
+      transform: rotate(0deg) translateX(10px);
+    }
+    75% {
+      transform: rotate(-10deg) translateX(10px);
+    }
+    100% {
+      transform: rotate(0deg) translateX(10px);
+    }
+  }

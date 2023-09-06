@@ -1,13 +1,17 @@
 .contact_container{
+    height: 120vh;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
+    background-image: url(../../public/images/section6.png); 
+    background-size: cover;
+    padding-top: 100px;
 }
 .contact_box{
     position: relative;
     width: 500px;
-    height: 700px;
+    height: 730px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,24 +71,39 @@
     position: relative;
     width: 85%;
     background: rgba(255, 255, 255, 0.749);
-    padding: 15px 75px 17px 20px;
-    border: none;
+    padding: 15px 120px 17px 20px;
     outline: none;
     border-radius: 5px;
     font-size: 1em;
     letter-spacing: 0.05em;
 }
-.contact_box form textarea{
+.contact_box form input{
+    width: auto;
+}
+.contact_box form select{
     position: relative;
     width: 85%;
     background: rgba(255, 255, 255, 0.749);
-    padding: 15px 75px 17px 20px;
-    height: 160px;
-    border: none;
+    padding: 15px 120px 17px 20px;
     outline: none;
     border-radius: 5px;
     font-size: 1em;
     letter-spacing: 0.05em;
+}
+.contact_box form select {
+    width: auto;
+}
+.contact_box form textarea{
+    position: relative;
+    width: auto;
+    background: rgba(255, 255, 255, 0.749);
+    padding: 15px 140px 17px 20px;
+    height: 160px;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    font-family: 'Syne', sans-serif;
 }
 .contact_box form input::placeholder{
     color: rgba(78, 77, 77, 0.529);
@@ -96,6 +115,9 @@
     cursor: pointer;
     transition: 0.5s;
     width: 160px;
+    margin-bottom: 10px;
+    border: none;
+    font-weight: 100;  font-family: 'Syne', sans-serif;
 }
 .contact_box form input[type='submit']:hover{
     background: #F2055C;
@@ -112,9 +134,15 @@
     width: 200px;
     height: 50px;
     font-size: 17px;
-    border-radius: 10px;
+    border-radius: 4px;
     margin: 10px;
     border: solid 1px transparent;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.footer_btn input:hover{
+    color: white;
+    background: #F2055C;
 }
 .icons_box{
     margin: 20px;
