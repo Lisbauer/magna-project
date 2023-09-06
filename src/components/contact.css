@@ -47,9 +47,9 @@
     content: '';
     position: absolute;
     inset: 8px;
-    background: #929191;
+    background: #132c6bf9;
     border-radius: 15px;
-    border: 4px solid rgb(245, 245, 245);
+    border: 4px solid rgb(255, 0, 128);
 }
 
 .contact_box form{
@@ -65,7 +65,8 @@
 .contact_box form h2{
     color: #ffffff;
     font-weight: 600;
-    font-size: 35px;
+    font-size: 39px;
+    letter-spacing: 5px;
 }
 .contact_box form input{
     position: relative;
@@ -110,8 +111,8 @@
 }
 .contact_box form input[type='submit']{
     font-weight: 600;
-    background: #1E1E1E;
-    color: rgb(255, 255, 255);
+    background: #F2055C;
+    color: white;
     cursor: pointer;
     transition: 0.5s;
     width: 160px;
@@ -120,7 +121,8 @@
     font-weight: 100;  font-family: 'Syne', sans-serif;
 }
 .contact_box form input[type='submit']:hover{
-    background: #F2055C;
+    background: rgb(67, 0, 30);
+
 }
 .footer_container{
     width: 100%;

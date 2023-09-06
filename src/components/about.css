@@ -7,7 +7,7 @@
     align-items: center;
 }
 .about_bg{
-    background: #1010109b;
+    background: #101a33;
     padding: 40px;
     border: solid 1px #f2055c;
 }
@@ -29,9 +29,8 @@
 }
 
 /* alan astro */ 
-
 .astro_alan{
-    width: 350px;
+    width: 320px;
     animation: astroalan 20s linear infinite;
 }
 @keyframes astroalan {
@@ -51,3 +50,4 @@
       transform: rotate(0deg) translateX(10px);
     }
   }
+

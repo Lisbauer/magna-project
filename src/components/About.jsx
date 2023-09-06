@@ -4,7 +4,6 @@ import "./about.css";
 const About = () => {
   return (
     <div className="about_container">     
-    <div></div> 
     <img className="astro_alan" src="../images/alanonthemoon.png" alt="alan sobre la luna" />
         <div className="about_bg" data-aos="fade-down">
         <h2 className="about_tittle">Universo Magna Dimenseon</h2>
