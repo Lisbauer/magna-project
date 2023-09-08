@@ -4,3 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
 
+.navbar_home{
+    background-image: url(../../public/images/section5.png); 
+}

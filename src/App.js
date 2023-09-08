@@ -11,11 +11,13 @@ import Rocket from "./components/Rocket";
 function App() {
   return (
     <div className="App">
+      <div className="navbar_home">
       <div id="navbar">
       <Navbar />
       </div>
       <div id="home">
         <Home />
+      </div>
       </div>
       <div className="toTop">
         <Rocket />

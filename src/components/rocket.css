@@ -17,6 +17,7 @@
   }
   .rockett img{
     z-index: 10000;
+    width: 90px;
   }
   .rockett::before{
     content: '';
@@ -72,5 +73,18 @@
     .rockett::before{
       width: 13px;
       left: 21px;
+    }
+  }
+  @media (max-width: 700px) {
+    .rocket-box img{
+      width: 70px;
+    }
+    .rockett::after{
+      width: 8px;
+      left: 55px;
+    }
+    .rockett::before{
+      width: 8px;
+      left: 55px;
     }
   }

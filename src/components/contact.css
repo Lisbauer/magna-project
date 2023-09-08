@@ -4,7 +4,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    background-image: url(../../public/images/section6.png); 
+    background-image: url(../../public/images/sectioncontact.png); 
     background-size: cover;
     padding-top: 100px;
 }
@@ -157,4 +157,23 @@
     font-size: 2.1em;
     color: white;
     margin-left: 13px;
+}
+@media (max-width: 600px) {
+    .contact_box{
+        width: 400px;
+    }
+    .contact_box form h2{
+        font-size: 24px;
+    }
+    .footer_btn input{
+        width: 160px;
+        font-size: 13px;
+        height: 40px;
+    }
+    .fonticonf{
+        font-size: 1.5em;
+    }
+    .fonticoni{
+        font-size: 1.5em;
+    }
 }

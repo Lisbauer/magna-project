@@ -23,7 +23,7 @@ const About = () => {
           obteniendo resultados efectivos, atractivos y a la medida de tus
           necesidades.
         </p>
-        <a className='home_btn' href="" data-aos="flip-left">
+        <a className='home_btn' href="">
             <span></span>
             <span></span>
             <span></span>

@@ -7,6 +7,11 @@ const Navbar = () => {
     animateScroll.scrollToTop();
   };
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   const handleLinkClick = () => {
     setMenuOpen(false);
   };
@@ -15,6 +20,18 @@ const Navbar = () => {
     <div className="navbar-container">
       <div className="logo_li_container">
         <img className="logo_magna" src="./images/logo.png" alt="logo magna" />
+
+        <div className="burger-link-container">
+          <button
+            className={`burger-btn ${isMenuOpen ? "active" : ""}`}
+            onClick={handleMenuClick}
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
+
+          <div className={`box-links ${isMenuOpen ? "active" : ""}`}> 
         <ul className="ul_box">
           <li>
             <Link
@@ -66,6 +83,7 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
+        </div></div>
       </div>
     </div>
   );

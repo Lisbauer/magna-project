@@ -1,17 +1,16 @@
-.navbar-container{
-    height: 100px;
-    background-color: #132c6b00;
-}
 .logo_li_container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly;    
+    backdrop-filter: blur(10px);
+    background-color: #132c6b80;   
+    padding: 10px;
 }
 .logo_magna{
     width: 250px;
 }
 .ul_box{
     display: flex;
-    margin: 10;
+    margin: 10;   
 }
 .ul_box li{
     color: white;
@@ -29,8 +28,9 @@
     letter-spacing: 2px;
     color: rgb(255, 255, 255);
     margin: 0 10px;
-    padding: 10px 25px;
+    padding: 10px 22px;
     position: relative;
+    cursor: pointer;
 }
 .ul_box li a::before{
     content: '';
@@ -39,15 +39,102 @@
     left: 0;
     height: 100%;
     width: 0;
-    background: #F2055C;
+    background: #f2055cff;
     z-index: -1;
-    box-shadow: 0 0 10px #F2055C,
-                0 0 20px #F2055C,
-                0 0 40px #F2055C,
-                0 0 80px #F2055C,
-                0 0 100px #F2055C;
-    transition: 0.25s;
+    border-radius: 10px;
+    transition: 0.4s;
 }
 .ul_box li a:hover::before{
     width: 100%;
+}
+
+/* burger button */
+.burger-btn{
+    display: flex;
+    flex-direction: column;
+    width: 3rem;
+    height: 3rem;
+    border: 0;
+    background: transparent;
+    display: none;
+  }
+  .burger-btn > * {
+    margin-bottom: 0.65rem;
+}
+.burger-btn.active div {
+    background-color: rgba(252, 251, 251, 0.996); /* Color de fondo de los elementos div */
+}
+.burger-btn div{
+    background-color: black;
+    height: 2px;
+    width: 100%;
+    border-radius: 5px;
+    transition: all .5s;
+    transform-origin: left;
+}
+.burger-btn:hover div:first-child{
+    transform: rotate(45deg);
+}
+.burger-btn:hover div:nth-child(2){
+    opacity: 0;
+}
+.burger-btn:hover div:last-child{
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 1100px) {
+    .logo_magna{
+        width: 180px;
+        height: 70px;
+    }
+}
+@media (max-width: 900px) {
+    .ul_box li a{
+        font-size: 18px;
+    }
+    .burger-btn{
+        display: flex;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border: 0;
+        background: transparent;
+        z-index: 10;
+    }  
+    .box-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.488);
+        backdrop-filter: blur(35px);
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        z-index: 9; 
+        height: 300px;
+    }
+    .box-links.active  {
+        transform: translateX(0);
+        transition: 0.5s;
+    } 
+    .ul_box {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 80px;
+        color: white;
+    }
+    .burger-btn.active + .box-links .ul_box {
+        display: block;
+    }
+    .ul_box li a::before{
+        background: rgba(242, 5, 92, 0.469);
+    }
+    .ul_box li a{
+        width: 200px;
+    }
 }
