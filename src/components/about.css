@@ -83,6 +83,9 @@
     }
   }
   @media (max-width: 500px) {
+    .astro_alan{
+      width: 240px;
+    }
     .about_container{
       height: 1200px;
     }
@@ -91,5 +94,19 @@
     }
     .about_container p{
       font-size: 13px;
+    }    
+    .about_bg{
+      max-width: 60%;
     }
   }
+  @media (max-width: 400px) {
+    .about_container{
+      height: auto;
+    }
+    .about_container p{
+      font-size: 11px;
+      width: auto;
+    }
+  }
+
+
