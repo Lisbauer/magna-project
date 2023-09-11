@@ -37,7 +37,6 @@ const Contact = () => {
       .then(
         (response) => {
           console.log("Correo electrónico enviado con éxito", response);
-          // Limpia el formulario o realiza cualquier otra acción después de enviar
         },
         (error) => {
           console.error("Error al enviar el correo electrónico", error);
@@ -63,7 +62,7 @@ const Contact = () => {
             name="numero"
             value={numero}
             onChange={(e) => setNumero(e.target.value)}
-            placeholder="[Cod de área] + Número"
+            placeholder="Número"
             style={{ border: error && !numero ? "red 1px solid" : "transparent" }}
           />
           <div>
@@ -96,10 +95,10 @@ const Contact = () => {
         </form>
       </div>
       <div className="footer_btn">
-        <input type="submit" value="Politica de privacidad" />
-        <input type="submit" value="Terminos y condiciones" />
+        <input type="submit" value="Política de privacidad" />
+        <input type="submit" value="Términos y condiciones" />
       </div>
-      <p style={{ color: "white" }}>© Magna Dimenseon. Todos los derechos reservados.</p>
+      <p className="footer_p">© Magna Dimenseon. Todos los derechos reservados.</p>
       <div className="footer_container">
         <img className="logo_magna" src="../images/logo.png" alt="logo" />
         <div className="icons_box">

@@ -2,11 +2,14 @@
     display: flex;
     justify-content: space-evenly;    
     backdrop-filter: blur(10px);
-    background-color: #132c6b80;   
+    /* background-color: #132c6b80;  ANTERIOR*/
+    background: #1e1e1eb8; /* #1E1E1E con transparencia */ 
     padding: 10px;
+    font-family: 'Nasalization';
 }
 .logo_magna{
-    width: 250px;
+    width: 270px;
+    height: fit-content;
 }
 .ul_box{
     display: flex;
@@ -39,9 +42,9 @@
     left: 0;
     height: 100%;
     width: 0;
-    background: #f2055cff;
+    background: rgb(242, 5, 92);
     z-index: -1;
-    border-radius: 10px;
+    border-radius: 7px;
     transition: 0.4s;
 }
 .ul_box li a:hover::before{
@@ -137,4 +140,5 @@
     .ul_box li a{
         width: 200px;
     }
+
 }

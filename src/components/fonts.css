@@ -1,9 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
-
 .navbar_home{
-    background-image: url(../../public/images/section5.png); 
+    background-image: url(../../public/images/bg1.png); 
 }
+@media (max-width: 650px) {
+    .navbar_home{
+        background-image: url(../../public/images/bgmobile1.png); 
+        background-size: cover;
+    }
+}
+
+@font-face {
+    font-family: 'Nasalization';
+    src: url('../../fonts/nasalization-rg.otf');
+  }
+  
+  @font-face {
+    font-family: 'Nizzoli';
+    src: url('../../fonts/nizzoli-regular.otf');
+  }

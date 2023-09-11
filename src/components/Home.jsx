@@ -6,7 +6,7 @@ const Home = () => {
     <div className="home-bg">
       <div className="bg_text_btn">
         <div className="container_tittles">
-          <h3 className="subtittle_home">Tecnologia de otra</h3>
+          <h3 className="subtittle_home">Tecnología de otra</h3>
           <h1 className="home_tittle">DIMENSEON</h1>
         </div>
 

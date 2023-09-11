@@ -1,6 +1,6 @@
 .about_container{
     height: 100vh;
-    background-image: url(../../public/images/aboutbg.png); 
+    background-image: url(../../public/images/bg2.png); 
     background-size: cover;
     display: flex;
     justify-content: space-evenly;
@@ -12,6 +12,8 @@
     border: solid 1px #faf8f8;
 }
 .about_box{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -19,13 +21,15 @@
 .about_tittle{
     color: #f2055c;
     font-size: 50px;
+    font-family: 'Nasalization';
 }
 .about_container p{
     color: white;
-    text-align: center;
     width: 600px;
     font-size: 1.2em;
     line-height: 20px;
+    font-weight: 100;
+    font-family: 'Nizzoli', Arial, sans-serif;
 }
 
 /* alan astro */ 
@@ -68,6 +72,7 @@
   @media (max-width: 600px) {
     .about_container{
       height: 1200px;
+      background-image: url(../../public/images/bgmobile3.png); 
     }
     .about_tittle{
       font-size: 24px;
@@ -76,5 +81,15 @@
       font-size: 16px;
       width: 300px;
     }
-
+  }
+  @media (max-width: 500px) {
+    .about_container{
+      height: 1200px;
+    }
+    .about_tittle{
+      font-size: 22px;
+    }
+    .about_container p{
+      font-size: 13px;
+    }
   }

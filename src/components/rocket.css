@@ -62,19 +62,7 @@
         transform: translateY(2px);
     }
   }
-  @media (max-width: 900px) {
-    .rocket-box img{
-      width: 40px;
-    }
-    .rockett::after{
-      width: 13px;
-      left: 21px;
-    }
-    .rockett::before{
-      width: 13px;
-      left: 21px;
-    }
-  }
+
   @media (max-width: 700px) {
     .rocket-box img{
       width: 70px;
