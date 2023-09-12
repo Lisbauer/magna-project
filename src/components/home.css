@@ -225,3 +225,20 @@
         width: 180px;
     }
 }
+@media (max-width: 400px) {
+    .home_tittle{
+        font-size: 1.8em;
+    }
+    .subtittle_home{
+        letter-spacing: 4px;
+    }
+    .home_btn{
+        font-size: 8px;
+        width: 150px;
+    }
+}
+@media (max-width: 340px) {
+    .bg_text_btn{
+        padding: 15px;
+    }
+}

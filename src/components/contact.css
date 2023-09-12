@@ -241,4 +241,16 @@
         width: 20%;
         font-size: 11px;
     }
+    .footer_container{
+        width: 0;
+    }
+    .icons_box{
+        display: flex;
+    }
+    .footer_p{
+        font-size: 7px;
+    }
+    .contact_box form{
+        padding: 0 0;
+    }
 }

@@ -76,3 +76,19 @@
       left: 55px;
     }
   }
+  @media (max-width: 400px) {
+    .rocket-box img{
+      width: 60px;
+    }
+    .rockett::after{
+      width: 6px;
+      left: 55px;
+    }
+    .rockett::before{
+      width: 6px;
+      left: 46px;
+    }
+    .toTop{
+      right: 0;
+    }
+  }

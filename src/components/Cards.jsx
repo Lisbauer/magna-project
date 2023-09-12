@@ -8,7 +8,7 @@ const Cards = () => {
         <h2 className="cards_tittle">NUESTROS MUNDOS</h2>
     
       <div className="container2">
-        <div className="box2" data-aos="fade-right">
+        <div className="box2">
           <span></span>
           <div className="content">
             <h2>Data analytics & DCU</h2>
@@ -19,7 +19,7 @@ const Cards = () => {
           </div>
         </div>
 
-        <div className="box2" data-aos="fade-down">
+        <div className="box2" >
           <span></span>
           <div className="content">
             <h2>UX UI & CX</h2>
@@ -31,7 +31,7 @@ const Cards = () => {
           </div>
         </div>
 
-        <div className="box2" data-aos="fade-left">
+        <div className="box2" >
           <span></span>
           <div className="content">
             <h2>Web 3.0</h2>
@@ -43,7 +43,7 @@ const Cards = () => {
           </div>
         </div>
 
-        <div className="box2" data-aos="fade-right">
+        <div className="box2" >
           <span></span>
           <div className="content">
             <h2>AI</h2>
@@ -54,7 +54,7 @@ const Cards = () => {
           </div>
         </div>
 
-        <div className="box2" data-aos="fade-up">
+        <div className="box2" >
           <span></span>
           <div className="content">
             <h2>Blockchain</h2>
@@ -66,7 +66,7 @@ const Cards = () => {
           </div>
         </div>
 
-        <div className="box2" data-aos="fade-left">
+        <div className="box2">
           <span></span>
           <div className="content">
             <h2>Apps iOS & Androidn</h2>

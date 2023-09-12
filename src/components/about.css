@@ -108,5 +108,9 @@
       width: auto;
     }
   }
-
+  @media (max-width: 340px) {
+    .astro_alan{
+      width: 170px;
+    }
+}
 
