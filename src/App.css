@@ -2,3 +2,18 @@
   text-align: center;
   font-weight: 100;
 }
+.navbar_home{
+  background-image: url(./../public/images/bg1.png); 
+}
+@media (max-width: 1100px) {
+  .navbar_home{
+      background-image: url(./../public/images/bgtablet1.png); 
+      background-size: cover;
+  }
+}
+@media (max-width: 650px) {
+  .navbar_home{
+      background-image: url(./../public/images/bgmobile1.png); 
+      background-size: cover;
+  }
+}
