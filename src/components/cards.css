@@ -128,9 +128,8 @@
         width: 380px;
         height: 250px;
     }
-
 }
-@media (max-width: 450px) {
+@media (max-width: 470px) {
     .cards_superior{
         height: 230vh;
     }
@@ -148,12 +147,12 @@
         width: auto;
     }
 }
-@media (max-width: 370px) {
+@media (max-width: 400px) {
     .cards_superior{
         height: 210vh;
     }
     .cards_tittle{
-        font-size: 9px;
+        font-size: 13px;
     }
     .container2{
         width: auto;

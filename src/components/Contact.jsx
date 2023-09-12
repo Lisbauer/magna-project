@@ -11,12 +11,14 @@ const Contact = () => {
   const [servicio, setServicio] = useState("");
   const [mensaje, setMensaje] = useState("");
   const [error, setError] = useState(false);
+  const [enviado, setEnviado] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     if (!nombre || !numero || !servicio || !mensaje) {
       setError(true);
+      setEnviado(false); 
       return;
     }
 
@@ -28,20 +30,30 @@ const Contact = () => {
     };
 
     emailjs
-      .send(
-        "service_3h77yj4", // Reemplaza con tu SERVICE ID
-        "template_7qfvucu", // Reemplaza con tu TEMPLATE ID
-        emailParams,
-        "c-8emIEBk9zCo1zHo" // Reemplaza con tu USER ID (PUBLIC KEY)
-      )
-      .then(
-        (response) => {
-          console.log("Correo electrónico enviado con éxito", response);
-        },
-        (error) => {
-          console.error("Error al enviar el correo electrónico", error);
-        }
-      );
+    .send(
+      "service_3h77yj4", // Reemplaza con tu SERVICE ID
+      "template_7qfvucu", // Reemplaza con tu TEMPLATE ID
+      emailParams,
+      "c-8emIEBk9zCo1zHo" // Reemplaza con tu USER ID (PUBLIC KEY)
+    )
+    .then(
+      (response) => {
+        console.log("Correo electrónico enviado con éxito", response);
+        setEnviado(true);
+        setError(false);
+      },
+      (error) => {
+        console.error("Error al enviar el correo electrónico", error);
+        setEnviado(false);
+        setError(true);
+      }
+    );
+};
+
+  const handleNumeroChange = (e) => {
+    const inputValue = e.target.value;
+    const validInput = inputValue.replace(/[^0-9+]/g, "");
+    setNumero(validInput);
   };
 
   return (
@@ -61,7 +73,7 @@ const Contact = () => {
             type="text"
             name="numero"
             value={numero}
-            onChange={(e) => setNumero(e.target.value)}
+            onChange={handleNumeroChange}
             placeholder="Número"
             style={{ border: error && !numero ? "red 1px solid" : "transparent" }}
           />
@@ -73,7 +85,7 @@ const Contact = () => {
               style={{ border: error && !servicio ? "red 1px solid" : "transparent" }}
             >
               <option value="" disabled defaultValue>
-              Seleccione un servicio
+                Seleccione un servicio
               </option>
               <option value="Data analytics & DCU">Data analytics & DCU</option>
               <option value="UX UI & CX">UX UI & CX</option>
@@ -91,7 +103,12 @@ const Contact = () => {
             style={{ border: error && !mensaje ? "red 1px solid" : "transparent" }}
           ></textarea>
           <div>
-          <input type="submit" value=" Enviar señales"/>     {error && <p style={{ color: "red", margin:"0",}}>Por favor complete todos los campos.</p>}</div>
+            <input type="submit" value=" Enviar señales" />{" "}
+            {error && <p style={{ color: "red", margin: "0", fontWeight:"700", fontFamily:"'Nizzoli', Arial, sans-serif" }}>Por favor complete todos los campos.</p>}
+            {enviado && !error && (
+              <p style={{ color: "green", margin: "0", fontWeight:"700", fontFamily:"'Nizzoli', Arial, sans-serif"}}>Mensaje enviado.</p>
+            )}
+          </div>
         </form>
       </div>
       <div className="footer_btn">
@@ -102,18 +119,10 @@ const Contact = () => {
       <div className="footer_container">
         <img className="logo_magna" src="../images/logo.png" alt="logo" />
         <div className="icons_box">
-          <a
-            href="https://www.facebook.com/magna.dimenseon"
-            target="_blank"
-            alt="facebook-icon"
-          >
+          <a href="https://www.facebook.com/magna.dimenseon" target="_blank" alt="facebook-icon">
             <FontAwesomeIcon className="fonticonf" icon={faFacebook} />
           </a>
-          <a
-            href="https://www.instagram.com/magna.dimenseon/"
-            target="_blank"
-            alt="facebook-icon"
-          >
+          <a href="https://www.instagram.com/magna.dimenseon/" target="_blank" alt="facebook-icon">
             <FontAwesomeIcon className="fonticoni" icon={faInstagram} />
           </a>
         </div>

@@ -224,7 +224,7 @@
         font-size: 14px;
     }
 }
-@media (max-width: 370px) {
+@media (max-width: 390px) {
     .contact_box{
         width: 280px;
         height: 700px;

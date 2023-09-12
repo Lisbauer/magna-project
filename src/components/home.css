@@ -10,6 +10,7 @@
     backdrop-filter: blur(10px);
     padding: 80px;
     border: solid 1px white;
+    z-index: 0;
 }
 .container_tittles{
     line-height: 10px;
@@ -163,8 +164,6 @@
         bottom: 100%;
     }
 }
-
-
 @media (max-width: 900px) {
     .bg_text_btn{
         padding: 45px;

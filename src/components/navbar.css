@@ -68,7 +68,7 @@
     background-color: rgba(252, 251, 251, 0.996); /* Color de fondo de los elementos div */
 }
 .burger-btn div{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     height: 2px;
     width: 100%;
     border-radius: 5px;
@@ -84,26 +84,24 @@
 .burger-btn:hover div:last-child{
     transform: rotate(-45deg);
 }
-
 @media (max-width: 1100px) {
     .logo_magna{
-        width: 180px;
-        height: 70px;
+        width: 220px;
+    }
+    .ul_box li a{
+        font-size: 13px;
     }
 }
 @media (max-width: 900px) {
-    .ul_box li a{
-        font-size: 18px;
-    }
     .burger-btn{
         display: flex;
         position: absolute;
-        top: 10px;
+        top: 30px;
         right: 10px;
         border: 0;
         background: transparent;
         z-index: 10;
-    }  
+      }  
     .box-links {
         display: flex;
         flex-direction: column;
@@ -111,34 +109,63 @@
         top: 0px;
         right: 0;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.488);
-        backdrop-filter: blur(35px);
+        background-color: rgba(3, 1, 38, 0.671);
+        backdrop-filter: blur(2px);
         justify-content: center;
-        align-items: center;
         transform: translateY(-100%);
         z-index: 9; 
         height: 300px;
+        transition: 0.5s;
     }
     .box-links.active  {
         transform: translateX(0);
         transition: 0.5s;
-    } 
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+    }
     .ul_box {
-        display: none;
+        flex-direction: column;
         list-style: none;
         padding: 0;
-        margin: 0;
-        width: 80px;
+        margin-left: 50px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
         color: white;
     }
-    .burger-btn.active + .box-links .ul_box {
-        display: block;
-    }
-    .ul_box li a::before{
-        background: rgba(242, 5, 92, 0.469);
-    }
     .ul_box li a{
-        width: 200px;
+        font-size: 17px;
     }
-
+    .ul_box li::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0); 
+        transform-origin: right; 
+        transition: transform 0.2s ease-in-out;
+      }
+    .ul_box li:hover::before {
+        transform: scaleX(1); 
+        transform-origin: left; 
+    }
+}
+@media (max-width: 500px) {
+    .ul_box li a{
+        font-size: 13px;
+    }
+    .logo_magna{
+        width: 180px;
+    }
+    .burger-btn{
+        top: 20px;
+    }
+    .box-links{
+        height: 270px;
+    }
 }
