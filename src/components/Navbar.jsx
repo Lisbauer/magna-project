@@ -33,7 +33,7 @@ const Navbar = () => {
 
           <div className={`box-links ${isMenuOpen ? "active" : ""}`}> 
         <ul className="ul_box">
-          <li>
+          <li className="menu_btn">
             <Link
               to="home"
               smooth={true}
@@ -46,7 +46,7 @@ const Navbar = () => {
             </Link>
     
           </li>
-          <li>
+          <li className="menu_btn">
           <Link
               to="about"
               smooth={true}
@@ -58,7 +58,7 @@ const Navbar = () => {
               Quiénes somos
             </Link>
           </li>
-          <li>          
+          <li className="menu_btn">          
             <Link
               to="servicios"
               smooth={true}
@@ -70,7 +70,7 @@ const Navbar = () => {
              Servicios
             </Link>
           </li>
-          <li>
+          <li className="contact_btn">
           <Link
               to="contacto"
               smooth={true}
@@ -79,6 +79,10 @@ const Navbar = () => {
               exact="true"
               onClick={handleLinkClick}
             >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
               Contacto
             </Link>
           </li>
