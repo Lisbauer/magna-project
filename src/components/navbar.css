@@ -5,7 +5,10 @@
     /* background-color: #132c6b80;  ANTERIOR*/
     background: #1e1e1eb8; /* #1E1E1E con transparencia */ 
     padding: 10px;
-    font-family: 'Nasalization';
+    font-family: 'Nasalization';  
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
 }
 .logo_magna{
     width: 270px;

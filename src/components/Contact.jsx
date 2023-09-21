@@ -3,6 +3,8 @@ import "./contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
@@ -117,13 +119,19 @@ const Contact = () => {
       </div>
       <p className="footer_p">© Magna Dimenseon. Todos los derechos reservados.</p>
       <div className="footer_container">
-        <img className="logo_magna" src="../images/logo.png" alt="logo" />
+        <img className="logo_magna" id="logomagna" src="../images/logo.png" alt="logo" />
         <div className="icons_box">
           <a href="https://www.facebook.com/magna.dimenseon" target="_blank" alt="facebook-icon">
             <FontAwesomeIcon className="fonticonf" icon={faFacebook} />
           </a>
           <a href="https://www.instagram.com/magna.dimenseon/" target="_blank" alt="facebook-icon">
             <FontAwesomeIcon className="fonticoni" icon={faInstagram} />
+          </a>
+          <a href="https://www.linkedin.com/company/magna-dimenseon/" target="_blank" alt="facebook-icon">
+            <FontAwesomeIcon className="fonticoni" icon={faLinkedin} />
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=5491160568293&text=Hola%20Magna%20Dimenseon,%20me%20contacto%20desde%20la%20web" target="_blank" alt="facebook-icon">
+            <FontAwesomeIcon className="fonticoni" icon={faWhatsapp} />
           </a>
         </div>
       </div>
