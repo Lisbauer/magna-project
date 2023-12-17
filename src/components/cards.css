@@ -170,6 +170,11 @@
 } 
 @media (max-width: 310px) {
     .cards_superior{
-        height: 280vh;
+        height: 310vh;
+    }
+}
+@media (max-width: 270px) {
+    .cards_superior{
+        height: 330vh;
     }
 }

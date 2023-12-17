@@ -124,13 +124,13 @@ const Contact = () => {
           <a href="https://www.facebook.com/magna.dimenseon" target="_blank" alt="facebook-icon">
             <FontAwesomeIcon className="fonticonf" icon={faFacebook} />
           </a>
-          <a href="https://www.instagram.com/magna.dimenseon/" target="_blank" alt="facebook-icon">
+          <a href="https://www.instagram.com/magna.dimenseon/" target="_blank" alt="instagram-icon">
             <FontAwesomeIcon className="fonticoni" icon={faInstagram} />
           </a>
-          <a href="https://www.linkedin.com/company/magna-dimenseon/" target="_blank" alt="facebook-icon">
+          <a href="https://www.linkedin.com/company/magna-dimenseon/" target="_blank" alt="linkedin-icon">
             <FontAwesomeIcon className="fonticoni" icon={faLinkedin} />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=5491160568293&text=Hola%20Magna%20Dimenseon,%20me%20contacto%20desde%20la%20web" target="_blank" alt="facebook-icon">
+          <a href="https://api.whatsapp.com/send?phone=5491160568293&text=Hola%20Magna%20Dimenseon,%20me%20contacto%20desde%20la%20web" target="_blank" alt="whatsapp-icon">
             <FontAwesomeIcon className="fonticoni" icon={faWhatsapp} />
           </a>
         </div>
