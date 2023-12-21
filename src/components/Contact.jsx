@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { LanguageContext } from "./LanguageContext";
 import "./contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -14,6 +15,7 @@ const Contact = () => {
   const [mensaje, setMensaje] = useState("");
   const [error, setError] = useState(false);
   const [enviado, setEnviado] = useState(false);
+  const { isEnglish, toggleLanguage } = useContext(LanguageContext);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -62,13 +64,13 @@ const Contact = () => {
     <div className="contact_container">
       <div className="contact_box" data-aos="fade-down">
         <form onSubmit={sendEmail}>
-          <h2>Haz contacto</h2>
+          <h2>{isEnglish ? "Contact us" : "Haz contacto"}</h2>
           <input
             type="text"
             name="nombre"
             value={nombre}
             onChange={(e) => setNombre(e.target.value)}
-            placeholder="Nombre completo"
+            placeholder={isEnglish ? "Full name" : "Nombre completo"}
             style={{ border: error && !nombre ? "red 1px solid" : "transparent" }}
           />
           <input
@@ -76,7 +78,7 @@ const Contact = () => {
             name="numero"
             value={numero}
             onChange={handleNumeroChange}
-            placeholder="Número"
+            placeholder={isEnglish ? "Number" : "Número"}
             style={{ border: error && !numero ? "red 1px solid" : "transparent" }}
           />
           <div>
@@ -87,7 +89,7 @@ const Contact = () => {
               style={{ border: error && !servicio ? "red 1px solid" : "transparent" }}
             >
               <option value="" disabled defaultValue>
-                Seleccione un servicio
+                {isEnglish ? "Select a service" : "Seleccione un servicio"}
               </option>
               <option value="Data analytics & DCU">Data analytics & DCU</option>
               <option value="UX UI & CX">UX UI & CX</option>
@@ -101,23 +103,23 @@ const Contact = () => {
             name="mensaje"
             value={mensaje}
             onChange={(e) => setMensaje(e.target.value)}
-            placeholder="Mensaje"
+            placeholder={isEnglish ? "Message" : "Mensaje"}
             style={{ border: error && !mensaje ? "red 1px solid" : "transparent" }}
           ></textarea>
           <div>
-            <input type="submit" value=" Enviar señales" />{" "}
-            {error && <p style={{ color: "red", margin: "0", fontWeight:"700", fontFamily:"'Nizzoli', Arial, sans-serif" }}>Por favor complete todos los campos.</p>}
+            <input type="submit" value={isEnglish ? "Send signs" : " Enviar señales"} />{" "}
+            {error && <p style={{ color: "red", margin: "0", fontWeight:"700", fontFamily:"'Nizzoli', Arial, sans-serif" }}>{isEnglish ? "Please complete all fields." : "Por favor complete todos los campos."}</p>}
             {enviado && !error && (
-              <p style={{ color: "green", margin: "0", fontWeight:"700", fontFamily:"'Nizzoli', Arial, sans-serif"}}>Mensaje enviado.</p>
+              <p style={{ color: "green", margin: "0", fontWeight:"700", fontFamily:"'Nizzoli', Arial, sans-serif"}}>{isEnglish ? "Message sent" : "Mensaje enviado."}</p>
             )}
           </div>
         </form>
       </div>
       <div className="footer_btn">
-        <input type="submit" value="Política de privacidad" />
-        <input type="submit" value="Términos y condiciones" />
+        <input type="submit" value={isEnglish ? "Privacy Policy" : "Política de privacidad"} />
+        <input type="submit" value={isEnglish ? "Terms and Conditions" : "Términos y condiciones"} />
       </div>
-      <p className="footer_p">© Magna Dimenseon. Todos los derechos reservados.</p>
+      <p className="footer_p">{isEnglish ? "© Magna Dimenseon. All rights reserved." : "© Magna Dimenseon. Todos los derechos reservados."}</p>
       <div className="footer_container">
         <img className="logo_magna" id="logomagna" src="../images/logo.png" alt="logo" />
         <div className="icons_box">

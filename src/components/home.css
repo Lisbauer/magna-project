@@ -164,7 +164,7 @@
         bottom: 100%;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .bg_text_btn{
         padding: 45px;
     }
@@ -194,6 +194,7 @@
 @media (max-width: 600px) {
     .subtittle_home{
         font-size: 0.9em;
+        line-height: 15px;
     }
     .home_tittle{
         font-size: 3.2em;
@@ -217,7 +218,7 @@
         margin-bottom: 60px;
     }
     .subtittle_home{
-        letter-spacing: 8px;
+        letter-spacing: 8px;        
     }
     .home_btn{
         font-size: 11px;

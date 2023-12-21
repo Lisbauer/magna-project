@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./navbar.css";
 import { Link, animateScroll } from "react-scroll";
+import { LanguageContext } from "./LanguageContext";
 
 const Navbar = () => {
   const scrollToTop = () => {
     animateScroll.scrollToTop();
   };
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const { isEnglish, toggleLanguage } = useContext(LanguageContext);
 
   const handleMenuClick = () => {
     setMenuOpen(!isMenuOpen);
@@ -14,7 +16,14 @@ const Navbar = () => {
 
   const handleLinkClick = () => {
     setMenuOpen(false);
+    
   };
+  const handleLanguageClick = (language) => {
+    if ((language === "en" && !isEnglish) || (language === "es" && isEnglish)) {
+      toggleLanguage();
+    }
+  };
+  
 
   return (
     <div className="navbar-container">
@@ -42,7 +51,7 @@ const Navbar = () => {
               exact="true"
               onClick={handleLinkClick}
             >
-              Home
+              {isEnglish ? "Home" : "Inicio"}
             </Link>
     
           </li>
@@ -55,7 +64,7 @@ const Navbar = () => {
               exact="true"
               onClick={handleLinkClick}
             >
-              Quiénes somos
+              {isEnglish ? "About us" : "Quiénes somos"}
             </Link>
           </li>
           <li className="menu_btn">          
@@ -67,7 +76,7 @@ const Navbar = () => {
               exact="true"
               onClick={handleLinkClick}
             >
-             Servicios
+              {isEnglish ? "Services" : "Servicios"}
             </Link>
           </li>
           <li className="contact_btn">
@@ -83,9 +92,26 @@ const Navbar = () => {
             <span></span>
             <span></span>
             <span></span>
-              Contacto
+              {isEnglish ? "Contact" : "Contacto"}
             </Link>
           </li>
+          <div className="language-container">
+            <h3
+       className={`languageEn ${isEnglish ? "active" : ""}`}
+       onClick={() => handleLanguageClick("en")}
+       disabled={isEnglish}
+            >
+              EN
+            </h3>
+            <span style={{color: "white"}}>/</span>
+            <h3
+        className={`languageEs ${isEnglish ? "" : "active"}`}
+        onClick={() => handleLanguageClick("es")}
+        disabled={!isEnglish}v
+            >
+              ES
+            </h3>
+          </div>
         </ul>
         </div></div>
       </div>

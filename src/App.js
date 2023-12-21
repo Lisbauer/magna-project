@@ -1,4 +1,5 @@
 import "./App.css";
+import { LanguageProvider } from "./components/LanguageContext";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
@@ -10,8 +11,10 @@ import Rocket from "./components/Rocket";
 function App() {
   return (
     <div className="App">
+      <LanguageProvider>
       <div className="navbar_home">
       <div id="navbar">
+    
       <Navbar />
       </div>
       <div id="home">
@@ -30,6 +33,7 @@ function App() {
       <div id="contacto">
         <Contact />
       </div>
+      </LanguageProvider>
     </div>
   );
 }
