@@ -5,6 +5,10 @@ import "./home.css";
 const Home = () => {
   const { isEnglish, toggleLanguage } = useContext(LanguageContext);
 
+  const handleClick = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="home-bg">
       <div className="bg_text_btn">
@@ -14,7 +18,7 @@ const Home = () => {
         </div>
 
         <div className="home_btn_container">
-          <a className="home_btn" href="">
+          <a className="home_btn" href="" onClick={handleClick}>
             <span></span>
             <span></span>
             <span></span>
@@ -22,7 +26,7 @@ const Home = () => {
             {isEnglish ? "Our worlds" : "Nuestros mundos"}
           </a>
 
-          <a className="home_btn" href="">
+          <a className="home_btn" href="" onClick={handleClick}>
             <span></span>
             <span></span>
             <span></span>

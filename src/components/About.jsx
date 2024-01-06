@@ -4,7 +4,11 @@ import "./about.css";
 
 const About = () => {
   const { isEnglish, toggleLanguage } = useContext(LanguageContext);
-  
+
+  const handleClick = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="about_container">     
     <img className="astro_alan" src="../images/alanonthemoon.png" alt="alan sobre la luna" />
@@ -22,7 +26,7 @@ const About = () => {
         <p>
           {isEnglish ? "Our strength lies in the passion with which we carry out each job, therefore, we immerse ourselves in the continuous search for excellence, obtaining effective, attractive results tailored to your needs." : "Nuestra fuerza radica en la pasión con la que realizamos cada trabajo,por ello, nos sumergimos en la búsqueda continua de la excelencia obteniendo resultados efectivos, atractivos y a la medida de tus necesidades."}
         </p>
-        <a className='home_btn' href="">
+        <a className='home_btn' href="" onClick={handleClick}>
             <span></span>
             <span></span>
             <span></span>
